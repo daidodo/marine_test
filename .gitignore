@@ -1,0 +1,12 @@
+tags
+*.[aod]
+*.so
+*.pb.cc
+*.pb.h
+*.gperf
+*.perf
+*.time
+*_unittest
+*_exper
+*_test
+*_coretest
