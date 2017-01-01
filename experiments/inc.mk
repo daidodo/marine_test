@@ -7,7 +7,7 @@
 
 TARGET = $(TARGET_OBJ:.o=)
 
-MAIN_DIR := ../../..
+MAIN_DIR := ../..
 MARINE_DIR := $(MAIN_DIR)/marine
 
 ifeq ($(findstring release, $(MAKECMDGOALS)), release)
@@ -18,7 +18,7 @@ endif
 
 INCLUDE := $(MY_INCLUDE) -I$(MAIN_DIR) -I$(MARINE_DIR)
 
-CXXFLAGS := $(MY_MACRO) $(RELEASE) $(DEBUG) $(MY_FLAGS) -Wall -Werror $(INCLUDE)
+CXXFLAGS := $(MY_MACRO) $(RELEASE) $(DEBUG) $(MY_FLAGS) -DUNIT_TEST -Wall -Werror $(INCLUDE)
 LIB := $(MY_LIBS) -lrt
 PROTOC := protoc
 PROTOCFLAGS := --cpp_out=.
